@@ -1,4 +1,12 @@
 # Skin-Cancer-Prediction
+
+### **Dataset**
+
+---
+
+[**The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions**](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T)
+
+![](https://github.com/ashishpatel26/Skin-Lesions-Detection-Deep-learning/blob/main/images/dataset.JPG)
 ___
 To clone the project to your local machine, use the following command:
 ```bash 
