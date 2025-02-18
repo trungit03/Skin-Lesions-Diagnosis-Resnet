@@ -49,15 +49,14 @@ show_probabilities_btn = st.sidebar.button("Show Probabilities")
 show_history_btn = st.sidebar.button("Show Prediction History")
 
 if uploaded_file and not (make_prediction_btn or show_probabilities_btn or show_history_btn):
-    # Nếu chưa nhấn nút, hiển thị ảnh
     image = Image.open(uploaded_file)
     st.image(image, caption="Uploaded Image", use_column_width=True)
 
-# Xử lý sự kiện khi nhấn các nút
+# Handle events when buttons are pressed
 if uploaded_file:
     image = Image.open(uploaded_file)
 
-    # Nếu nhấn nút "Make Prediction"
+    # "Make Prediction"
     if make_prediction_btn:
         predicted_label, confidence, probabilities = predict(image)
         st.markdown("## Prediction Results")
@@ -76,7 +75,7 @@ if uploaded_file:
             ignore_index=True
         )
 
-    # Nếu nhấn nút "Show Probabilities"
+    # "Show Probabilities"
     elif show_probabilities_btn:
         _, _, probabilities = predict(image)
         probabilities_df = pd.DataFrame({
@@ -94,7 +93,7 @@ if uploaded_file:
             ax.text(prob + 0.01, i, f"{prob:.2f}", va="center")
         st.pyplot(fig)
 
-    # Nếu nhấn nút "Show Prediction History"
+    # "Show Prediction History"
     elif show_history_btn:
         st.markdown("## Prediction History")
         if st.session_state.history_df.empty:
