@@ -1,4 +1,4 @@
-# Skin-Cancer-Prediction
+# Skin-Cancer-Diagnosis
 
 ### **Dataset**
 
