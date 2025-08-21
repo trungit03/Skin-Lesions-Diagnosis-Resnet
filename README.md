@@ -1,4 +1,4 @@
-# Skin-Cancer-Diagnosis
+# Skin-Lesions-Diagnosis
 
 ### **Dataset**
 
